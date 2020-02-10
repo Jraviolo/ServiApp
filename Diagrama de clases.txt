@@ -1,0 +1,48 @@
+@startuml
+
+title ServiApp - Diagrama de clases
+
+
+class Tienda {
+  +Int: idTienda;
+  +String: nombre;
+  +String: descripcion;
+  +Int: teléfono;
+  +String: direccion;
+  +String: horarioDeAtencion;
+  +Rubro: rubro;
+}
+
+class Servicio {
+  +Int: idServicio;
+  +String: nombre;
+  +String: descripcion;
+  +Float: precio;
+  +??: imagen;
+}
+
+class Usuario {
+  +Int: idUsuario;
+  +String: nombre;
+  +String: email;
+}
+
+Enum Rubro {
+Baño de mascotas
+Paseadores de perros
+Lavado de autos
+Limpieza de piletas
+Jardineros
+Limpieza de casas
+Plomería
+Gasista
+Electricista
+Otro
+}
+
+
+
+Tienda -- Servicio
+
+
+@enduml
